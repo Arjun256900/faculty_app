@@ -1,0 +1,22 @@
+{
+  "name": "faculty_app",
+  "version": "1.0.0",
+  "description": "A faculty details website developed for Chennai Institute Of Technology",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jus' Some Programmers",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "nodemon": "^3.1.4"
+  }
+}
