@@ -20,7 +20,7 @@ export const registerHOD = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
     // Update the user
-    await HOD.updateOne({ name: name }, { $set: { email: email } });
+    // await HOD.updateOne({ name: name }, { $set: { email: email } });
     await HOD.updateOne({ name: name }, { $set: { password: hashedPassword } });
     // Generate and send JWT
     const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, {
