@@ -8,6 +8,7 @@ export default function Home() {
   const searchStat = () => {
     setSearchstat(true);
   };
+  
   const [selectedFilter, setFilter] = useState("");
   return (
     <>
@@ -28,13 +29,31 @@ export default function Home() {
               setFilter(e.target.value);
             }}
           >
-            <option value="Dept" hidden>
-              Dept
+            <option value="Designation" hidden>
+              Designation
             </option>
-            <option>IT</option>
-            <option>CSE</option>
-            <option>AIML</option>
+            <option>HOD</option>
+            <option>Chairman</option>
+            <option>Principal</option>
+            <option>Faculty</option>
           </select>
+          {(selectedFilter == "HOD" || selectedFilter == "Faculty") && (
+            <select
+              className="filter"
+              value={selectedFilter}
+              onChange={(e) => {
+                setFilter(e.target.value);
+              }}
+            >
+              <option value="Department" hidden>
+                Department
+              </option>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>Principal</option>
+              <option>Faculty</option>
+            </select>
+          )}
           <button
             className="btn btn-outline-primary search"
             onClick={searchStat}
