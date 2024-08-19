@@ -16,7 +16,7 @@ export const registerHOD = async (req, res) => {
       res.status(409).json({existingUser});
       return;
     }
-    // Hash the password
+    // Hashing the password
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
     // Update the user
